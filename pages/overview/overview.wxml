@@ -1,0 +1,30 @@
+<scroll-view class="pl14 pt10 pr14" scroll-y="true" height="100%">
+  <view class="mb10">
+    <text>客户统计</text>
+    <view class="flex-wrp mt10">
+      <view class="flex-item" wx:for="{{overviewList}}">
+        <view class="mb5">
+          <text>{{item.value}}</text>
+        </view>
+        <text>{{item.label}}</text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <text class="mt10">近7日新增</text>
+    <view class="chart-container">
+      <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ barChartData }}">
+      </ec-canvas>
+    </view>
+  </view>
+
+  <!-- <view class="chart-container">
+	
+		<ec-canvas
+			id="mychart-dom-pie"
+			canvas-id="mychart-pie"
+			ec="{{ pieChartData }}"
+		>
+		</ec-canvas>
+	</view> -->
+</scroll-view>
